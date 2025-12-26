@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Breakdown Application</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h2>Breakdown Filling Application</h2>
+
+    <form method="post">
+        <label>Date</label>
+        <input type="date" name="date">
+
+        <label>Machine Name</label>
+        <input type="text" name="machine" required>
+
+        <label>Problem</label>
+        <textarea name="problem" required></textarea>
+
+        <label>Action Taken</label>
+        <textarea name="action" required></textarea>
+
+        <label>Attended By (Engineer)</label>
+        <input type="text" name="engineer" required>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <a href="/view">View Breakdown Records</a>
+</div>
+
+</body>
+</html>
